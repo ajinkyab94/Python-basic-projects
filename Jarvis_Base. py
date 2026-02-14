@@ -1,0 +1,26 @@
+import os
+from gtts import gTTS
+
+def speak(text):
+    print(f"Assistant: {text}")
+    # आवाजात रूपांतर करणे
+    tts = gTTS(text=text, lang='mr') # 'mr' म्हणजे मराठी!
+    tts.save("speech.mp3")
+    # प्ले करणे (Pydroid मध्ये mp3 प्ले करण्यासाठी)
+    os.system("mp3play speech.mp3") 
+
+def wish_me():
+    speak("नमस्कार अजिंक्य! मी तुझा पर्सनल असिस्टंट. आज आपण काय करूया?")
+
+# सुरुवात
+wish_me()
+
+# आपण बनवलेले प्रोजेक्ट्स इथे जोडणार:
+query = input("\nतू काय करू इच्छितो? : ").lower()
+
+if "weather" in query:
+    speak("मी हवामान तपासून सांगतो...")
+    # आपला WeatherApp चा कोड इथे येईल
+elif "joke" in query:
+    speak("एक जोक ऐक...")
+    # आपला JokeGenerator चा कोड इथे येईल
