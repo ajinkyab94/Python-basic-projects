@@ -1,0 +1,29 @@
+import os
+
+# १. सर्व प्रोजेक्ट्ससाठी एक मुख्य फोल्डर तयार करणे
+folder_name = "Ajinkya_Python_Projects"
+if not os.path.exists(folder_name):
+    os.makedirs(folder_name)
+
+# २. १८ ते ५५ पर्यंतचे लॉजिक्स (डिक्शनरी मध्ये)
+projects = {
+    18: "print('Project 18: Addition Logic')\nprint(10 + 20)",
+    19: "print('Project 19: Subtraction Logic')\nprint(50 - 20)",
+    20: "print('Project 20: Multiplication Logic')\nprint(5 * 5)",
+    21: "print('Project 21: Division Logic')\nprint(100 / 4)",
+    22: "num = 22\nprint(f'Project 22: {num} is Even' if num % 2 == 0 else 'Odd')",
+    23: "print('Project 23: Table of 2')\nprint([2*i for i in range(1, 11)])",
+    38: "print('Project 38: Jarvis Voice Logic (gTTS)')\n# gTTS code here",
+    52: "text = 'AJINKYA'\nprint('Project 52: Secret Code =', ''.join([chr(ord(c)+2) for c in text]))",
+    55: "print('Project 55: Reverse String')\nprint('AJINKYA'[::-1])"
+}
+
+# ३. लूप वापरून प्रत्येक प्रोजेक्टची वेगळी फाईल बनवणे
+for i in range(18, 56):
+    file_path = os.path.join(folder_name, f"project_{i}.py")
+    with open(file_path, "w") as f:
+        # जर वरच्या डिक्शनरी मध्ये लॉजिक असेल तर ते लिहा, नाहीतर बेसिक मेसेज लिहा
+        logic = projects.get(i, f"print('Project {i}: Basic Python Logic by Ajinkya')\nprint('Keep Coding!')")
+        f.write(logic)
+
+print(f"✅ अभिनंदन अजिंक्य! '{folder_name}' नावाच्या फोल्डरमध्ये ३८ फाईल्स तयार झाल्या आहेत!")
