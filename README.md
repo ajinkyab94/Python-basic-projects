@@ -20,7 +20,7 @@
 ## 📂 या रिपॉजिटरीमध्ये काय आहे?
 यामध्ये तुम्हाला पायथॉनचे विविध स्तरांवरील कोडिंग लॉजिक्स पाहायला मिळतील:
 - **Basics:** Arithmetic, Tables, Even/Odd logic.
-- **Utility:** Password Generator, Km to Miles Converter.
+- **Utility:** Password Generator, Km to Miles Converter.​"Project 58: जार्विसला आवाज दिला! आता माझा पायथॉन कोड मराठीत बोलू शकतो."
 - **Advanced Logic:** Secret Encryption (Secret Codes), String Reversal.
 - **AI Concepts:** Jarvis Voice integration logic and shutdown protocols.
 
